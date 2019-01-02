@@ -48,7 +48,6 @@
         }
         .ivu-row-flex{
             height: 100%;
-            width:auto;
         }
     }
 </style>

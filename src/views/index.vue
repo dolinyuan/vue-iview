@@ -12,6 +12,7 @@
             </Col>
         </Row>
         <div>DEV stashDEV</div>
+        <div>git test</div>
     </div>
 </template>
 <script>

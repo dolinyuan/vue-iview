@@ -14,8 +14,7 @@
 
 
         <div>DEV</div>
-        <div>DEV stashDEV</div>
-        <div>shangchuan</div>
+        <div>shangchuan DEV</div>
     </div>
 </template>
 <script>

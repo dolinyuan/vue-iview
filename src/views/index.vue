@@ -15,7 +15,7 @@
 
         <div>DEV</div>
         <div>shangchuan DEV</div>
-        <div>ts ts</div>
+        <div>dev-shangchuan</div>
     </div>
 </template>
 <script>

@@ -11,7 +11,7 @@
                 </h2>
             </Col>
         </Row>
-        <div>master</div>
+        <div>DEV stashDEV</div>
     </div>
 </template>
 <script>

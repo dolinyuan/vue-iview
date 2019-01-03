@@ -12,7 +12,7 @@
             </Col>
         </Row>
         <div>DEV</div>
-        <div>shangchuan</div>
+        <div>shangchuan DEV</div>
     </div>
 </template>
 <script>

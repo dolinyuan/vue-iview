@@ -9,15 +9,15 @@
                     <p>Welcome to your iView app!</p>
                     <Button @click="handleStart">Start iView</Button>
                 </h2>
+                <div>DEV</div>
+                <div>shangchuan DEV</div>
+                <div>dev-shangchuan</div>
+                <div>master-dev</div>
+                <div>shangchuan-master-dev-dev</div>
             </Col>
         </Row>
 
 
-        <div>DEV</div>
-        <div>shangchuan DEV</div>
-        <div>dev-shangchuan</div>
-        <div>master-dev</div>
-        <div>shangchuan-master-dev-dev</div>
     </div>
 </template>
 <script>
@@ -54,7 +54,7 @@
             }
         }
         .ivu-row-flex{
-            height: 100%;
+            //height: 100%;
         }
     }
 </style>

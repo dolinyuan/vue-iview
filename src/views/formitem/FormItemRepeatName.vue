@@ -50,11 +50,11 @@ export default {
                     var count = appearCount(itemValueArray,value)
                     if(count > 1){
                         callback(new Error('value has exsisted'));
-                    }                
+                    }
                     callback([])
                 }
             }
-            
+
             return {
                 index: 1,
                 formDynamic: {
@@ -68,8 +68,16 @@ export default {
                 },
                 funRules:{validator:validateCheckRepeat, trigger: 'change'},
                 /*funRules:{required: true, message: '变量不能为空', trigger: 'blur'}*/
-                
-                
+
+
+            }
+        },
+        watch:{
+            formDynamic:{
+                handler(val){
+                    this.$refs['formDynamic'].validate()
+                },
+                deep:true
             }
         },
         methods: {
@@ -117,5 +125,5 @@ export default {
     }
 </script>
 <style scoped lang="less">
-    
+
 </style>

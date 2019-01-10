@@ -8,7 +8,6 @@
                 {{item}}
             </li>
         </ul>
-        <div @click="switchClick">Switch</div>
         <div v-if="!isShow">
         <FormItem
                 v-for="(item, index) in formDynamic.items"
@@ -35,7 +34,6 @@
             </Row>
         </FormItem>
         </div>
-        <input v-if="isShow" type="textarea" v-model="formDynamic.blukValues"></input>
         <FormItem>
             <Button type="primary" @click="handleSubmit('formDynamic')">Submit</Button>
             <Button @click="handleReset('formDynamic')" style="margin-left: 8px">Reset</Button>
@@ -44,6 +42,7 @@
     </div>
 </template>
 <script>
+const defaultObj={value: 'value1',index: 1,status: 1}
 export default {
         data () {
             const appearCount = (array,value)=>array.reduce((a,v)=>v===value?a+1:a+0,0)
@@ -62,70 +61,58 @@ export default {
                     callback([])
                 }
             }
-
             return {
                 index: 1,
                 isShow:false,
                 formDynamic: {
-                    blukValues:"",
-                    items: [
-                        {
-                            value: '',
-                            index: 1,
-                            status: 1
-                        }
-                    ]
+                    items: []
                 },
-                funRules:{validator:validateCheckRepeat, trigger: 'change'},
-                /*funRules:{required: true, message: '变量不能为空', trigger: 'blur'}*/
+                funRules:[
+                    {validator:validateCheckRepeat, trigger: 'change'},
+                ],
             }
         },
         watch:{
             formDynamic:{
                 handler(val){
-                    this.$refs['formDynamic'].validate()
+                    //this.$nextTick(function(){
+                        this.valueValidateField();
+                    //})
                 },
                 deep:true
             },
-            'formDynamic.items':{
-                handler(val){
-                },
-                deep:true
-            }
+        },
+        mounted:function () {
+            this._initValue();
         },
         methods: {
-            switchClick(){
-                /*this.isShow = !this.isShow;
-                this.$refs['formDynamic'].validate().then((result)=>{
-                    if(this.isShow){
-                        console.log(this.isShow)
-                        this._renderBlukValues(this.formDynamic.items)
-                    }
-                })*/
-
-            },
-            _renderBlukValues(values){
-                this.formDynamic.blukValues = ""
-                values.forEach((item,index)=>{
-                    this.formDynamic.blukValues += item.value;
+            valueValidateField(){
+                var list = [];
+                this.formDynamic.items.forEach((item,index) => {
+                    var str = 'items.' + index + '.value';
+                    list.push(str)
                 })
+              console.log(list)
+                debugger
+              Promise.all(list.map((item) => {
+                  return new Promise(resolve => {
+                      this.$refs['formDynamic'].validateField(item,(valid)=>{
+                          debugger
+                          if(!valid){
+                              resolve(true)
+                          }
+                          else{
+                              resolve(false)
+                          }
+                      })
+                  })
+                })).then(function (data) {
+                    console.log('resolve')
+                    console.log(data)
+              })
             },
-            check(data,index){
-                var currentValue = data.value
-                var itemValueArray = [];
-                this.formDynamic.items.forEach(function(item){
-                    itemValueArray.push(item.value)
-                })
-                const appearCount = (array,value)=>array.reduce((a,v)=>v===value?a+1:a+0,0)
-                var count = appearCount(itemValueArray,data.value)
-                if(count > 1){
-                    this.formDynamic.items[index].value=""
-                    console.log(currentValue)
-                    this.funRules.message = "变量 " + currentValue + " 已存在，请重新输入"
-                }
-                else{
-                    this.funRules.message = "变量不能为空"
-                }
+            _initValue(){
+                this.formDynamic.items.push(defaultObj)
             },
             handleSubmit (name) {
                 this.$refs[name].validate((valid) => {
@@ -146,6 +133,7 @@ export default {
                     index: this.index,
                     status: 1
                 });
+                debugger
             },
             handleRemove (index) {
                 this.formDynamic.items[index].status = 0;

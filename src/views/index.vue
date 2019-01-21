@@ -9,15 +9,26 @@
                     <p>Welcome to your iView app!</p>
                     <Button @click="handleStart">Start iView</Button>
                 </h2>
-                <div>DEV</div>
-                <div>shangchuan DEV</div>
-                <div>dev-shangchuan</div>
-                <div>master-dev</div>
-                <div>shangchuan-master-dev-dev</div>
             </Col>
         </Row>
-
-
+        <Row type="flex" justify="left" align="middle">
+            <Col span="24">
+                <h2>Demo List</h2>
+                <ol>
+                    <li>
+                        <a target="_blank" href="http://localhost:8080/form-item-repeat-name">动态增减表单项</a>
+                        <p>补充：重复字段的实时校验</p>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://localhost:8080/form-item-prop-diy">添加tag标签</a>
+                        <p>单个input，阻止回车提交表单：<br/>
+                            a.
+                        </p>
+                    </li>
+                </ol>
+            </Col>
+        </Row>
+        <xmp><b></b><input type="text" style="display: none;"></xmp>
     </div>
 </template>
 <script>
@@ -36,10 +47,10 @@
     .index{
         width: 100%;
         position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        text-align: center;
+        top: 20px;
+        bottom: 20px;
+        left: 100px;
+        text-align: left;
         h1{
             height: 150px;
             img{
@@ -48,13 +59,18 @@
         }
         h2{
             color: #666;
-            margin-bottom: 200px;
+            margin-bottom: 20px;
             p{
                 margin: 0 0 50px;
             }
         }
         .ivu-row-flex{
             //height: 100%;
+            a{
+                font-weight:bold;
+                font-size:14px;
+            }
         }
+
     }
 </style>

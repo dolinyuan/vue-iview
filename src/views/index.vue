@@ -25,6 +25,18 @@
                             a.
                         </p>
                     </li>
+                    <li>
+                        <a target="_blank" href="http://localhost:8080/canvas-svg">canvas-svg</a>
+                        <p>canvas-svg：待测试<br/>
+                            a.
+                        </p>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://localhost:8080/echarts">echarts</a>
+                        <p>echarts：待测试<br/>
+                            a.
+                        </p>
+                    </li>
                 </ol>
             </Col>
         </Row>

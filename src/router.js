@@ -19,6 +19,20 @@ const routers = [
             title: ''
         },
         component: (resolve) => require(['./views/formitem/FormItemPropDiy.vue'], resolve)
+    },
+    {
+        path: '/canvas-svg',
+        meta: {
+            title: ''
+        },
+        component: (resolve) => require(['./views/CanvasSvg/canvas.vue'], resolve)
+    },
+    {
+        path: '/echarts',
+        meta: {
+            title: ''
+        },
+        component: (resolve) => require(['./views/echarts/echarts.vue'], resolve)
     }
 ];
 export default routers;

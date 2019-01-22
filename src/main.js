@@ -5,7 +5,10 @@ import Routers from './router';
 import Util from './libs/util';
 import App from './app.vue';
 import 'iview/dist/styles/iview.css';
-
+//import myCharts from './plugin/myCharts.js'
+//Vue.use(myCharts)
+import echarts from 'echarts'
+//Vue.prototype.$echarts = echarts
 Vue.use(VueRouter);
 Vue.use(iView);
 

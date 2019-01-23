@@ -66,6 +66,30 @@
             label:'1day'
         }
     ]
+    //获取系统当前时间
+    var nowdate = new Date();
+    var y = nowdate.getFullYear();
+    var m = nowdate.getMonth()+1;
+    var d = nowdate.getDate();
+
+    //获取系统前24小时前的时间
+    var onedaydate = new Date(nowdate-24*3600*1000);
+    var y = onedaydate.getFullYear();
+    var m = onedaydate.getMonth()+1;
+    var d = onedaydate.getDate();
+
+    //获取系统前一周的时间
+    var oneweekdate = new Date(nowdate-7*24*3600*1000);
+    var y = oneweekdate.getFullYear();
+    var m = oneweekdate.getMonth()+1;
+    var d = oneweekdate.getDate();
+
+    //获取系统前一个月的时间
+    nowdate.setMonth(nowdate.getMonth()-1);
+    var y = nowdate.getFullYear();
+    var m = nowdate.getMonth()+1;
+    var d = nowdate.getDate();
+
     export default {
         name: "selectList",
         data(){
@@ -99,7 +123,8 @@
                       this.grading = this.gradingData[0].value
                       break;
               }
-            }
+            },
+
         }
     }
 </script>

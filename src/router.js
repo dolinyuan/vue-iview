@@ -33,6 +33,20 @@ const routers = [
             title: ''
         },
         component: (resolve) => require(['./views/echarts/echarts.vue'], resolve)
+    },
+    {
+        path: '/cascader',
+        meta: {
+            title: ''
+        },
+        component: (resolve) => require(['./views/cascader/cascader.vue'], resolve)
+    },
+    {
+        path: '/selectlist',
+        meta: {
+            title: ''
+        },
+        component: (resolve) => require(['./views/select/selectList.vue'], resolve)
     }
 ];
 export default routers;

@@ -47,6 +47,13 @@ const routers = [
             title: ''
         },
         component: (resolve) => require(['./views/select/selectList.vue'], resolve)
+    },
+    {
+        path: '/subject',
+        meta: {
+            title: ''
+        },
+        component: (resolve) => require(['./views/subject/subject.vue'], resolve)
     }
 ];
 export default routers;

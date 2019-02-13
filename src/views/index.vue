@@ -48,6 +48,26 @@
                             a.
                         </p>
                     </li>
+                    <li>
+                        <a target="_blank" href="http://localhost:8080/subject">subject</a>
+                        <p>selectlist：下拉框<br/>
+                            a.
+                        </p>
+                    </li>
+                    <li>
+                        <div>
+                            <p>软件下载</p>
+                            <p>
+                                https://blog.csdn.net/shengshengshiwo/article/details/79599761<br>
+                                软件下载<br>
+                                https://pan.baidu.com/s/1bpnlLAR#list/path=%2F&parentPath=%2Fsharelink4244700829-484111051750387<br>
+                                破解补丁<br>
+                                JetbrainsCrack-3.1-release-enc.jar<br>
+                                教程<br>
+                                http://baijiahao.baidu.com/s?id=1585530607645308087&wfr=spider&for=pc
+                            </p>
+                        </div>
+                    </li>
                 </ol>
             </Col>
         </Row>

@@ -49,6 +49,13 @@ const routers = [
         component: (resolve) => require(['./views/select/selectList.vue'], resolve)
     },
     {
+        path: '/tabs',
+        meta: {
+            title: ''
+        },
+        component: (resolve) => require(['./views/tabs/tabs.vue'], resolve)
+    },
+    {
         path: '/subject',
         meta: {
             title: ''

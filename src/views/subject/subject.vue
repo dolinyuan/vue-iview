@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <!--<div>
         1.active-class是哪个组件的属性
         vue-router模块的router-link组件
 
@@ -302,7 +302,7 @@
         currentValue：当前元素的值
         index： 当前元素在数组中的位置
         array：整个数组
-        reduce本身接受两个参数，callback和initialValue，分别是reduce的回调函数和计算初始值--也就是第一次reduce的callback被调用时的previousValue的值，默认为0
+        reduce本身接受两个参数，callback和initialValue，分别是reduce的回调函数和计算初始值&#45;&#45;也就是第一次reduce的callback被调用时的previousValue的值，默认为0
 
         reduce在数组为空且没有定义initialValue时，会抛出错误，在火狐下报错为：TypeError: reduce of empty array with no initial value
         所以选A
@@ -410,7 +410,7 @@
 
         D: undefined
         参考网页：https://mp.weixin.qq.com/s/TvW48Oq-aCGwudjZ5iBS2w
-    </div>
+    </div>-->
 </template>
 
 <script>

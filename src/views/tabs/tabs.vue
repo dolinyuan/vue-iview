@@ -5,7 +5,8 @@
         arr1{{arr1}}<br>
         tabs{{tabs}}
         <Tabs ref="tabsRef" type="card" v-model="currentTab">
-            <TabPane v-for="tab in tabs" :name="tab" :label="'标签' + tab">标签{{ tab }}</TabPane>
+            <!--<TabPane v-for="tab in tabs" :name="tab" :label="'标签' + tab">标签{{ tab }}</TabPane>-->
+            <TabPane v-for="tab in tabs" :key="tab" :label="'标签' + tab">标签{{ tab }}</TabPane>
             <Button @click="handleStart" size="small" slot="extra">增加</Button>
         </Tabs>
     </div>

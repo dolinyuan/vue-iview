@@ -1,12 +1,14 @@
 <template>
     <div>
-        currentTab{{currentTab}}<br>
+        currentTab: {{currentTab}}<br>
+        lastIndex: {{lastIndex}} <br>
+        temp: {{temp}} <br>
         arr{{arr}}<br>
         arr1{{arr1}}<br>
         tabs{{tabs}}
         <Tabs ref="tabsRef" type="card" v-model="currentTab">
             <!--<TabPane v-for="tab in tabs" :name="tab" :label="'标签' + tab">标签{{ tab }}</TabPane>-->
-            <TabPane v-for="tab in tabs" :key="tab" :label="'标签' + tab">标签{{ tab }}</TabPane>
+            <TabPane v-for="tab in tabs" :key="index" :label="'标签' + tab">标签{{ tab }}</TabPane>
             <Button @click="handleStart" size="small" slot="extra">增加</Button>
         </Tabs>
     </div>
@@ -26,7 +28,9 @@
                 ],
                 arr:[],
                 timer:null,
-                timer2:null
+                timer2:null,
+                lastIndex:null,
+                temp:null
             }
         },
         computed:{
@@ -43,6 +47,7 @@
                 this.arr1.unshift(test_data);
             },
             startTimer(){
+                this.temp = this.tabs[this.currentTab];
               this.timer = setInterval(this.handleTabsAdd,1000);
               this.timer2 = setInterval(this.initArr,5000);
               setTimeout(this.clear,10000)
@@ -88,6 +93,9 @@
                 if(this.max>10){
                     this.clearTimer()
                 }
+                this.lastIndex = this.tabs.indexOf(this.temp);
+                this.currentTab = this.lastIndex;
+
                 /*this.$nextTick(function () {
                     this.updateNav();
                 });*/

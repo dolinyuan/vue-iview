@@ -61,6 +61,20 @@ const routers = [
             title: ''
         },
         component: (resolve) => require(['./views/subject/subject.vue'], resolve)
+    },
+    {
+        path: '/steps',
+        meta: {
+            title: ''
+        },
+        component: (resolve) => require(['./views/steps/steps.vue'], resolve)
+    },
+    {
+        path: '/modal',
+        meta: {
+            title: ''
+        },
+        component: (resolve) => require(['./views/modal/modal.vue'], resolve)
     }
 ];
 export default routers;

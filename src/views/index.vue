@@ -61,6 +61,18 @@
                         </p>
                     </li>
                     <li>
+                        <a target="_blank" href="http://localhost:8080/modal">modal</a>
+                        <p>modal<br/>
+                            a.modal
+                        </p>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://localhost:8080/steps">steps</a>
+                        <p>modal<br/>
+                            a.modal
+                        </p>
+                    </li>
+                    <li>
                         <div>
                             <p>软件下载</p>
                             <p>

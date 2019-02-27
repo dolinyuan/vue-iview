@@ -20,7 +20,7 @@
         methods: {
             test(){
                 for (var i=1;i<=3;i++) {
-                    setTimeout(function(){console.log(i);},1000)
+                    //setTimeout(function(){console.log(i);},1000)
                     /*(function(j){
                         setTimeout( function timer(){
                             console.log( j );

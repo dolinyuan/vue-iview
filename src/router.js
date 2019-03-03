@@ -70,6 +70,20 @@ const routers = [
         component: (resolve) => require(['./views/steps/steps.vue'], resolve)
     },
     {
+        path: '/setInterval',
+        meta: {
+            title: ''
+        },
+        component: (resolve) => require(['./views/setInterval/setInterval.vue'], resolve)
+    },
+    {
+        path: '/table',
+        meta: {
+            title: ''
+        },
+        component: (resolve) => require(['./views/table/tableColumn.vue'], resolve)
+    },
+    {
         path: '/modal',
         meta: {
             title: ''

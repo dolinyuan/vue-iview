@@ -73,6 +73,18 @@
                         </p>
                     </li>
                     <li>
+                        <a target="_blank" href="http://localhost:8080/setInterval">setInterval</a>
+                        <p>setInterval<br/>
+                            a.setInterval
+                        </p>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://localhost:8080/table">tableColumn</a>
+                        <p>table<br/>
+                            a.tableColumn
+                        </p>
+                    </li>
+                    <li>
                         <div>
                             <p>软件下载</p>
                             <p>

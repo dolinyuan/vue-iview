@@ -7,9 +7,9 @@ export class TaskStageDetail{
     }
     isNormal(){
         if(this.stageStatus === "PROCESS" || this.stageStatus === "SUCCESS"){
-            return "process"
+            return true;
         }else if(this.stageStatus === "STOPPED" || this.stageStatus === "FAILED"){
-            return "error"
+            return false;
         }
     }
 }
@@ -23,9 +23,13 @@ export class TaskStageAnalyzer{
         let index = 0;
         for(let i=0;i<stages.length;i++){
             let stage = stages[i];
-            stageStatus = stage.isNormal();
             index = i;
-            if(stageStatus === "error"){
+            if(!stage.stageStatus){
+                index = (i-1);
+                break;
+            }
+            if(!stage.isNormal()){
+                stageStatus = "error";
                 break;
             }
         }

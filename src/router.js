@@ -84,6 +84,20 @@ const routers = [
         component: (resolve) => require(['./views/table/tableColumn.vue'], resolve)
     },
     {
+        path: '/table/renderHeader',
+        meta: {
+            title: ''
+        },
+        component: (resolve) => require(['./views/table/renderHeader.vue'], resolve)
+    },
+    {
+        path: '/promise',
+        meta: {
+            title: ''
+        },
+        component: (resolve) => require(['./views/promise/promise.vue'], resolve)
+    },
+    {
         path: '/modal',
         meta: {
             title: ''

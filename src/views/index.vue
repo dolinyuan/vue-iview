@@ -81,7 +81,14 @@
                     <li>
                         <a target="_blank" href="http://localhost:8080/table">tableColumn</a>
                         <p>table<br/>
-                            a.tableColumn
+                            a.tableColumn<br>
+                            b.<a target="_blank" href="http://localhost:8080/table/renderHeader">tableRenderHeader</a>
+                        </p>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://localhost:8080/promise">promise</a>
+                        <p>promise<br/>
+                            a.promise
                         </p>
                     </li>
                     <li>

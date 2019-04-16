@@ -12,6 +12,8 @@ import echarts from 'echarts'
 Vue.use(VueRouter);
 Vue.use(iView);
 
+import './language'
+
 // 路由配置
 const RouterConfig = {
     mode: 'history',

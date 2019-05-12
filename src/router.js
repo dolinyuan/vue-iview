@@ -103,6 +103,13 @@ const routers = [
             title: ''
         },
         component: (resolve) => require(['./views/modal/modal.vue'], resolve)
+    },
+    {
+        path: '/dropdown',
+        meta: {
+            title: ''
+        },
+        component: (resolve) => require(['./views/dropdown/dropdown.vue'], resolve)
     }
 ];
 export default routers;

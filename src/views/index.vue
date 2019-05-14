@@ -1,6 +1,6 @@
 <template>
     <div class="index">
-        <Row type="flex" justify="center" align="middle">
+        <Row type="flex" align="middle">
             <Col span="24">
                 <h1>
                     <img src="../images/logo.png">
@@ -11,7 +11,7 @@
                 </h2>
             </Col>
         </Row>
-        <Row type="flex" justify="left" align="middle">
+        <Row type="flex" justify="start" align="middle">
             <Col span="24">
                 <h2>Demo List</h2>
                 <ol>
@@ -89,6 +89,12 @@
                         <a target="_blank" href="http://localhost:8080/promise">promise</a>
                         <p>promise<br/>
                             a.promise
+                        </p>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://localhost:8080/dropdown">dropdown</a>
+                        <p>dropdown<br/>
+                            a.dropdown
                         </p>
                     </li>
                     <li>

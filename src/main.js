@@ -14,6 +14,8 @@ Vue.use(iView);
 
 import './language'
 
+import $ from 'jquery'
+
 // 路由配置
 const RouterConfig = {
     mode: 'history',

@@ -105,11 +105,25 @@ const routers = [
         component: (resolve) => require(['./views/modal/modal.vue'], resolve)
     },
     {
+        path: '/modal/dragdrop',
+        meta: {
+            title: ''
+        },
+        component: (resolve) => require(['./views/modal/modalDragdrop.vue'], resolve)
+    },
+    {
         path: '/dropdown',
         meta: {
             title: ''
         },
         component: (resolve) => require(['./views/dropdown/dropdown.vue'], resolve)
+    },
+    {
+        path: '/regexp',
+        meta: {
+            title: ''
+        },
+        component: (resolve) => require(['./views/regExp/regExp.vue'], resolve)
     }
 ];
 export default routers;

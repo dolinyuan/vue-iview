@@ -67,6 +67,12 @@
                         </p>
                     </li>
                     <li>
+                        <a target="_blank" href="http://localhost:8080//modal/dragdrop">/modal/dragdrop</a>
+                        <p>modal<br/>
+                            a.modal/dragdrop
+                        </p>
+                    </li>
+                    <li>
                         <a target="_blank" href="http://localhost:8080/steps">steps</a>
                         <p>modal<br/>
                             a.modal
@@ -101,6 +107,12 @@
                         <a target="_blank" href="http://localhost:8080/dropdown">dropdown</a>
                         <p>dropdown<br/>
                             a.dropdown
+                        </p>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://localhost:8080/regexp">regexp</a>
+                        <p>regexp<br/>
+                            a.regexp
                         </p>
                     </li>
                     <li>

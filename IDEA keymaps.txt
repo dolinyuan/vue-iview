@@ -1,0 +1,170 @@
+﻿aaa
+IDEA VIM
+main回车
+100.for回车
+new Date()回车.sout回车
+sleep回车
+
+快捷键 Alt+1打开收回project栏
+shift+Ctrl+A help: 
+recent file
+|recent change file
+|last edit location
+|next edit location
+Back
+Forward
+bookmarks
+
+alt+2调出favorites
+alt+shift+f 添加到收藏夹里
+插件：emacsIDEAs
+keymaps: 配置，plug-ins - AceJumpWorld增加快捷键
+ctrl+1跳转到project.esc跳转到文件
+ideaVim分屏
+
+列操作：
+help: move caret to next word
+Status.java
+1、选中冒号：edit->find->select all Occurrences->选中全部冒号 ctrl+alt+y
+2、向右选中单词 ctrl+右键头（+shift选中单词）
+3、变大写 edit->toggle ctrl+shift+U
+4、剪切CTRL+X
+5、home键移到到前面 move caret to line start
+6、移动光标到最后，修改剩余内容 move caret to line end
+7、格式化 code- reformat code CTRL+ALT+L
+
+找到错误，mac要F2？windows?
+
+LIVE TEMPLATE
+help: live template
+1、新建group
+2、新建template
+abb: main description: public static void main
+public static void main(String[] args){
+	$END$
+}
+3、application define选择java
+4、psfi（plain分组）
+abb: psfi description: public static final int
+public static final int $var1$ = $var2$;
+5、psfs 
+abb: psfi description: public static final string
+public static final String $var1$ = $var2$;
+6、pic 注释
+abb:pic desc:private int 带有注释
+/**
+* $VAR1$
+*/
+private int $VAR2$;
+
+$END$
+
+POSTFIX
+help:postfix
+1、enabled
+2、.fori;.sout;.field;.return;.nn;
+
+ALTER ENTER
+help: show intention actions
+1、自动创建函数
+2、LIST REPLACE
+for(int i = 0; i<list.size(); ++i)
+变化为最简单的方式：for(String item: list)
+3、字符串format或build
+String name = "zhangsan";
+int age = 24;
+System.out.println("name: " + name +", age: " + age);
+变化为：System.out.printf("name: %s, age: %d%n", name, age);
+
+String x = "name: " + name +", age: " + age;
+变化为：String x = String.format("name: %s, age: %d", name, age);
+
+build可以代码优化
+4、实现接口 implement interface
+public interface UserService{
+	void say();
+}
+5、单词拼写
+Typo changeto
+6、导包
+
+重构
+1、重构变量
+SHIFT+F6
+refactor->rename ALT+SHIFT+R
+2、重构方法
+a. refactor->change signature ALT+SHIFT+C 添加变量b.
+b. alt+enter (更快)
+add "string" as 2nd parameter to method "sayHello" 
+2、
+
+抽取
+1、抽取变量
+refactor->extract->variable ALT+SHIFT+L
+public String getFullName(String lastName){
+	String fullName = this.firstName + "," + lastName;
+	return fullName;
+}
+public void foo(){
+	getFullName("span");
+	getFullName("span");
+	getFullName("span");
+	getFullName("span");
+	getFullName("span");
+	getFullName("span");
+}
+2、抽取静态变量 alt+ctrl+C
+3、抽取成员变量 alt+ctrl+F
+抽取
+1、方法参数 ALT+CTRL+ P (PARAMETER) 
+2、函数 ALT+SHIFT+M
+
+寻找修改轨迹
+git集成
+1、annotate 默认集成git
+2、移动所有改动之处
+keymap->navigate->previous change
+alt+ctrl+z撤销
+操作：
+review
+查看代码里所有改动的地方shift+ctrl+箭头
+navigator -> 
+
+local history
+
+1、Spring关联
+File->project struct->facets->spring->给模块
+2、数据库的关联
+shift+f6重构表明
+
+断点
+https://www.imooc.com/video/16228
+toggle line breakpoint
+单步运行
+debug, ALT+shift+f9
+运行F8
+查看所有断点 shift+f8
+禁止所有断点 
+条件断点
+表达式求值
+运行到指定行
+setValue
+
+运行当前上下文
+debug context configuration
+在当前可运行列表中选择一个运行
+编辑当前运行行
+
+复制当前文件
+
+复制文件路径、
+多次复制，一次粘贴 ctrl shift v
+
+结构图
+navigator -> file structure
+maven文件过长-》maven-show dependencies 图上搜索
+类的继承图
+
+查看当前field,method大纲
+查看maven依赖，类图
+查看类继承结构ctrl+h，方法调用 help: call hierarchy
